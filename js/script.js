@@ -13,7 +13,7 @@ const background = new Sprite({
         x: 0,
         y: 0
     },
-    imageSrc: './Game Assets/background.png'
+    imageSrc: 'Game Assets/background.png'
 })
 
 const player = new Fighter ({
@@ -29,7 +29,7 @@ const player = new Fighter ({
     framesMax: 8,
     scale: 3.6,
     offset: {
-        x: 160,
+        x: 215,
         y: 125
     },
     sprites: {
@@ -123,7 +123,7 @@ const enemy = new Fighter ({
             x: -140,
             y: 100
         },
-        width: 100,
+        width: 10000,
         height: 50
     }
 })
@@ -203,7 +203,7 @@ function animate() {
             rectangle2: enemy
         }) &&
         player.isAttacking && 
-        player.framesCurrent === 3
+        player.framesCurrent === 1
     ) {
         enemy.takeHit()
         player.isAttacking = false
